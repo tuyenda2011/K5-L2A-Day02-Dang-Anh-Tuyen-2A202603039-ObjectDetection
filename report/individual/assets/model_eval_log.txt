@@ -1,0 +1,54 @@
+=== Notebook cell 2 ===
+
+Creating new Ultralytics Settings v0.0.8 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/usage/settings
+Clone https://github.com/tuyenda2011/K5-L2A-Day02-Dang-Anh-Tuyen-2A202603039-ObjectDetection.git -> /content/Day2-Lab
+commit mới nhất trong repo: fdac78c label
+LAB_ROOT: /content/Day2-Lab
+device: 0
+
+=== Notebook cell 3 ===
+
+OK: 50 train + 10 eval; eval không đi vào train.
+
+=== Notebook cell 7 ===
+
+Ultralytics 8.4.208 🚀 Python-3.13.16 torch-2.14.1+cu130 CUDA:0 (Tesla T4, 14913MiB)
+YOLO26n summary (fused): 121 layers, 2,390,464 parameters, 0 gradients, 5.4 GFLOPs
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 1506.6±529.2 MB/s, size: 76.8 KB)
+val: Scanning /content/Day2-Lab/dataset/labels/eval.cache... 10 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 10/10 2.8Mit/s 0.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 1/1 4.3it/s 0.2s
+                   all         10        113      0.515      0.576      0.484       0.24
+                   car         10         94      0.909      0.787       0.91       0.51
+                 truck          5          5      0.419        0.6      0.412      0.187
+                   bus          2          2     0.0994        0.5     0.0813     0.0438
+                   van          6         12       0.63      0.417      0.531      0.219
+Speed: 0.6ms preprocess, 5.7ms inference, 0.0ms loss, 1.8ms postprocess per image
+Results saved to /content/Day2-Lab/outputs/yolo26_runs/vehicle_eval
+{
+  "precision": 0.5145038914243458,
+  "recall": 0.5759751773049645,
+  "map50": 0.48358158627761816,
+  "map50_95": 0.23980590536903615,
+  "eval_images": 10,
+  "checkpoint": "/content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation/weights/best.pt"
+}
+
+=== Notebook cell 8 ===
+
+
+image 1/10 /content/Day2-Lab/dataset/images/eval/drive_051.jpg: 640x640 5 cars, 1 truck, 15.0ms
+image 2/10 /content/Day2-Lab/dataset/images/eval/drive_052.jpg: 640x640 6 cars, 26.4ms
+image 3/10 /content/Day2-Lab/dataset/images/eval/drive_053.jpg: 640x640 5 cars, 1 bus, 1 van, 19.1ms
+image 4/10 /content/Day2-Lab/dataset/images/eval/drive_054.jpg: 640x640 5 cars, 36.3ms
+image 5/10 /content/Day2-Lab/dataset/images/eval/drive_055.jpg: 640x640 3 cars, 1 bus, 27.3ms
+image 6/10 /content/Day2-Lab/dataset/images/eval/drive_056.jpg: 640x640 11 cars, 2 trucks, 3 buss, 30.6ms
+image 7/10 /content/Day2-Lab/dataset/images/eval/drive_057.jpg: 640x640 5 cars, 1 truck, 35.7ms
+image 8/10 /content/Day2-Lab/dataset/images/eval/drive_058.jpg: 640x640 27 cars, 2 buss, 4 vans, 60.8ms
+image 9/10 /content/Day2-Lab/dataset/images/eval/drive_059.jpg: 640x640 6 cars, 58.6ms
+image 10/10 /content/Day2-Lab/dataset/images/eval/drive_060.jpg: 640x640 6 cars, 1 truck, 1 bus, 24.9ms
+Speed: 2.5ms preprocess, 33.5ms inference, 3.3ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to /content/Day2-Lab/outputs/eval_predictions/visuals
+predictions saved to: /content/Day2-Lab/outputs/eval_predictions/visuals
+Đã tạo: /content/Day2-Lab/outputs/day2_colab_outputs.zip
